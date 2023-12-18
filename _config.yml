@@ -1,0 +1,7 @@
+# _config.yml
+
+defaults:
+  - scope:
+      path: "src/pages"
+    values:
+      layout: "monfichier"
