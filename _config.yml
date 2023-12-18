@@ -1,8 +1,0 @@
-# _config.yml
-
-# Configuration pour spécifier le fichier principal
-defaults:
-  - scope:
-      path: "src/pages"
-    values:
-      layout: "index.astro"  
