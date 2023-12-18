@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About me "
+				tagline="Découvrez mon parcours et mes compétences"
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/build2.png"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Je suis initialement issue du domaine de la comptabilité, mais j'ai décidé de me reconvertir dans le développement web. La comptabilité ne correspondait pas à mes aspirations, car les tâches étaient répétitives et robotiques. J'avais le besoin de me sentir évoluer et de voir l'impact concret de mon travail, ce que j'ai trouvé dans le développement web. </p>
+					<p> 
+					<p>
+					Au cours de mes expériences précédentes, j'ai eu l'opportunité de créer des sites web (CMS), de programmer et de déployer des logiciels pour digitaliser les processus.
+					Motivée par mes projets personnels et l'envie de créer mon propre site web, j'ai commencé à m'intéresser au développement en suivant des cours sur OpenClassroom. Dès le début, j'ai aimé coder et l'esprit logique du code. Depuis lors, ma passion pour le développement web ne cesse de croître. J'ai déjà obtenu mon Bac+2 et je suis actuellement en route vers un Bac+5, poursuivant mon apprentissage perpétuel des nouvelles technologies.
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Diplômes</h2>
+				<div class="content">
+					<p>Bac+2 Développeur web et mobile Full Stack JS , BTS Comptabilité et Gestion.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Langages et Framework</h2>
+				<div class="content">
+					<p>React , Node.Js , Javascript , Typescript , HTML , CSS , MySQL , Sequelize (ORM) , MongoDB </p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">API Méthodologies Design Patterns</h2>
+				<div class="content">
+					<p>API REST / Méthodes Agiles / MVC </p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Outils</h2>
+				<div class="content">
+					<p>Git, GitHub, Postman, VSCode, Trello, Figma, Wordpress, PackOffice </p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
